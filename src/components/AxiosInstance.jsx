@@ -12,7 +12,7 @@ const getBaseUrl = () => {
   
   // Priorité 2 : Détection selon le mode
   if (import.meta.env.PROD) {
-    return 'https://erp-scolaire-backend.onrender.com'
+    return 'https://ecommerce-gestion-backend.onrender.com'
   }
   
   // Développement local
