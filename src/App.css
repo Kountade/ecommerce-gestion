@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "bourok";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* --- FONDS --- */
+  /* Fond principal (Blanc cassé très doux pour faire ressortir le bleu et le vert) */
+  --color-base-100: oklch(98.5% 0.005 250);
+  /* Fond secondaire (Pour les cartes, les sections) */
+  --color-base-200: oklch(96% 0.01 250);
+  /* Bordures et éléments de fond */
+  --color-base-300: oklch(90% 0.02 250);
+  /* Texte principal (Utilisation de votre Bleu Marine pour une lecture parfaite) */
+  --color-base-content: oklch(30% 0.08 250); /* ~#0A3472 */
+
+  /* --- COULEURS DE MARQUE --- */
+  /* Vert du logo (Boutons principaux, CTA, icônes de succès) */
+  --color-primary: oklch(60% 0.17 150); /* ~#009A44 */
+  --color-primary-content: oklch(98% 0.01 150); /* Texte blanc sur le vert */
+
+  /* Bleu Marine du logo (Navbar, Footer, Titres principaux) */
+  --color-secondary: oklch(30% 0.08 250); /* ~#0A3472 */
+  --color-secondary-content: oklch(98% 0.01 250); /* Texte blanc sur le bleu */
+
+  /* Accent (Une version plus claire du vert pour les badges ou promos) */
+  --color-accent: oklch(70% 0.15 150); 
+  --color-accent-content: oklch(20% 0.05 150);
+
+  /* Neutre (Gris bleuté pour les textes secondaires) */
+  --color-neutral: oklch(40% 0.03 250);
+  --color-neutral-content: oklch(98% 0.01 250);
+
+  /* --- COULEURS D'ÉTAT --- */
+  --color-info: oklch(65% 0.15 230); /* Bleu clair */
+  --color-info-content: oklch(98% 0.01 230);
+  --color-success: oklch(60% 0.17 150); /* Identique au vert du logo */
+  --color-success-content: oklch(98% 0.01 150);
+  --color-warning: oklch(80% 0.2 80); /* Orange/Jaune */
+  --color-warning-content: oklch(20% 0.05 80);
+  --color-error: oklch(60% 0.2 30); /* Rouge */
+  --color-error-content: oklch(98% 0.01 30);
+
+  /* --- ARRONDIS --- */
+  /* J'ai gardé des arrondis modernes, mais vous pouvez les réduire à 0.25rem pour un look plus "industriel/agricole" */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  /* --- TAILLES & BORDURES --- */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+
+  /* --- EFFETS --- */
+  --depth: 1;
+  --noise: 0;
+}
