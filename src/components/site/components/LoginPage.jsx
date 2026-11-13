@@ -192,7 +192,7 @@ function LoginContent() {
             className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline"
           >
             <Shield className="w-3 h-3" />
-            Accès back-office
+            Accès back-office admin
             <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
