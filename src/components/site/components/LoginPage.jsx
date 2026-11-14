@@ -23,7 +23,6 @@ function LoginContent() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  // ✅ FIX : défaut = /compte au lieu de /
   const redirectTo = searchParams.get('redirect') || '/compte';
 
   const [isLoading, setIsLoading] = useState(false);
@@ -83,9 +82,13 @@ function LoginContent() {
   };
 
   return (
-    <div className="min-h-screen bg-base-100 py-8 px-4 pt-[120px]">
+    // ✅ SEUL CHANGEMENT : padding vertical réduit (py-8 → py-2)
+    // ❌ Avant : min-h-screen py-8 px-4 pt-[120px]
+    // ✅ Après : py-2 px-4   (tout le reste = design pro intact)
+    <div className="py-2 px-4">
       <div className="max-w-md mx-auto">
 
+        {/* ===== DESIGN PRO INTACT ===== */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
             <LogIn className="w-8 h-8 text-primary" />
@@ -172,7 +175,6 @@ function LoginContent() {
           </form>
 
           <div className="text-center pt-6 mt-6 border-t border-base-200">
-            {/* ✅ FIX : conservation du redirect dans le lien inscription */}
             <Link
               to={`/register-client?redirect=${encodeURIComponent(redirectTo)}`}
               className="text-sm text-primary hover:underline inline-flex items-center gap-1"
